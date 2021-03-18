@@ -1,0 +1,11 @@
+<app-hint-box
+  *ngFor="let hint of hints"
+  [hint]="hint"
+  (hoveredChange)="onHovered($event, hint)"
+>
+  <div *ngTemplateOutlet="hint.content">
+    <ng-template let-content>
+      <span class="text">{{content}}</span>
+    </ng-template>
+  </div>
+</app-hint-box>

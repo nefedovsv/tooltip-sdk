@@ -1,0 +1,9 @@
+.box {
+  width: 300px;
+  border: 1px solid green;
+}
+:host {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

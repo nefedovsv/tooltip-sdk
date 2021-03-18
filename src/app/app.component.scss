@@ -1,0 +1,13 @@
+.test {
+  border:1px solid red;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+}
+._hint_hovered {
+  border:1px solid blue;
+}
