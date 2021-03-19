@@ -1,0 +1,12 @@
+<div
+  [dropdown]="open"
+  [dropdownContent]="dropdown"
+>
+  <ng-content></ng-content>
+</div>
+
+<ng-template #dropdown>
+  <div *ngTemplateOutlet="content"></div>
+</ng-template>
+
+
