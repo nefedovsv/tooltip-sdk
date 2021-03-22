@@ -7,14 +7,8 @@ import { DropdownDirective } from '../../../directives/dropdown.directive';
   templateUrl: './dropdown-box.component.html',
   styleUrls: ['./dropdown-box.component.scss']
 })
-export class DropdownBoxComponent implements OnInit {
-
+export class DropdownBoxComponent {
   constructor(
    public readonly directive: DropdownDirective,
-  ) {
-  }
-
-  ngOnInit(): void {
-  }
-
+  ) {}
 }
