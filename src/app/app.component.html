@@ -1,42 +1,44 @@
-<!--<p-->
-<!--  [tuiHint]="tooltipFirst"-->
-<!--  class="test"-->
-<!--&gt;Hint 1</p>-->
+<p
+  [tuiHint]="tooltipFirst"
+  class="test"
+>Hint 1</p>
 
-<!--<p-->
-<!--  [tuiHint]="tooltipSecond"-->
-<!--  class="test"-->
-<!--&gt;Hint 2</p>-->
+<p
+  [tuiHint]="tooltipSecond"
+  class="test"
+>Hint 2</p>
 
-<!--<p class="test">-->
-<!--  Without hint-->
-<!--</p>-->
+<p class="test">
+  Without hint
+</p>
 
-<!--<hint-container></hint-container>-->
+<hint-container></hint-container>
 
-<!--<ng-template #tooltipFirst>-->
-<!--  <h1>It is my first template</h1>-->
-<!--</ng-template>-->
+<ng-template #tooltipFirst>
+  <h1>It is my first template</h1>
+</ng-template>
 
-<!--<ng-template #tooltipSecond>-->
-<!--  <h1>It is my second template</h1>-->
-<!--</ng-template>-->
+<ng-template #tooltipSecond>
+  <h1>It is my second template</h1>
+</ng-template>
+
+<hr>
 
 <app-dropdown
   [content]="dropdown"
+  [isVisible] = 'open'
 >
-  <button>
-    Button
+  <button
+  (click)="onClick()"
+  >
+    Click me!!!
   </button>
-
 </app-dropdown>
 
+<ng-template #dropdown>
+  <p class="box">Drop down</p>
+</ng-template>
 
 <app-portal-host>
   <ng-content></ng-content>
 </app-portal-host>
-
-
-<ng-template #dropdown>
-  <p>List of Elements</p>
-</ng-template>
