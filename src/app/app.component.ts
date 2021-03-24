@@ -6,7 +6,7 @@ import { PolymorpheusComponent } from '@tinkoff/ng-polymorpheus';
 
 
 
-export const TUI_DIALOGS = new InjectionToken<
+export const MODALS = new InjectionToken<
   ReadonlyArray<Observable<ReadonlyArray<any>>>
   >('A stream of dialogs');
 
@@ -25,7 +25,7 @@ export class AppComponent {
   constructor(
     @Inject(ModalService) private readonly modalService: ModalService,
     @Inject(Injector) private readonly injector: Injector,
-    @Inject(TUI_DIALOGS)
+    @Inject(MODALS)
     readonly dialogs: readonly Observable<readonly unknown[]>[] | null,
   ) {}
 

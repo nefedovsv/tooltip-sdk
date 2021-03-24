@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent, TUI_DIALOGS } from './app.component';
+import { AppComponent, MODALS } from './app.component';
 import { HintDirective } from "./directives/hint.directive";
 import { HintContainer } from './components/hint/hint.container';
 import { HintComponent } from './components/hint/box/hint.component';
@@ -38,7 +38,7 @@ import { PolymorpheusModule } from '@tinkoff/ng-polymorpheus';
     PolymorpheusModule
   ],
   providers: [{
-    provide: TUI_DIALOGS,
+    provide: MODALS,
     useExisting: ModalService,
     multi: true,
   }],

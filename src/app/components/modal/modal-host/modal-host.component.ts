@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { TUI_DIALOGS } from '../../../app.component';
+import { MODALS } from '../../../app.component';
 import { merge, Observable } from 'rxjs';
 
 @Component({
@@ -11,7 +11,7 @@ export class ModalHostComponent {
   readonly dialogs$ = merge(...this.dialogs);
 
   constructor(
-    @Inject(TUI_DIALOGS)
+    @Inject(MODALS)
     private readonly dialogs: ReadonlyArray<Observable<ReadonlyArray<any>>>,
   ) { }
 }
