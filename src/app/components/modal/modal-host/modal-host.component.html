@@ -1,0 +1,9 @@
+<div
+  *ngFor="let item of dialogs$ | async"
+  polymorpheus-outlet
+  class="dialog"
+  [content]="item.component"
+  [context]="item"
+></div>
+<div class="overlay"></div>
+

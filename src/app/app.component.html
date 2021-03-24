@@ -1,3 +1,11 @@
+<button
+  (click)="showDialog()"
+>
+  Show modal window!!!
+</button>
+
+<hr>
+
 <p
   [tuiHint]="tooltipFirst"
   class="test"
@@ -41,4 +49,8 @@
 
 <app-portal-host>
   <ng-content></ng-content>
+  <app-modal-host
+    *ngIf="dialogs && dialogs.length"
+  >
+  </app-modal-host>
 </app-portal-host>
